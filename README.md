@@ -1,11 +1,17 @@
-# swimlane-app-form
+# Basic Docker Flask Template
 
-This project aims to provide a dynamic webform generator for Swimlane applications so that users can submit requests directly to Swimlane based on one or more defined fields.
+This project is a basic `Docker` (and `docker-compose`) Flask project that can be used as a base template.
 
 This project has the following features:
 
 * Bootstrap 4 frontend
-* Dynamically render fields from Swimlane applications based on the application acronym
+* A single container hosting a Flask application
+* Utilizes best practices including:
+    * Flask application context
+    * Flask logging and error handling
+    * Flask Blueprints
+    * Utilizes a base template inherited within all blueprints
+    * Plus more!
 
 > NOTE: This is docker-compose project with only one container
 
@@ -15,42 +21,31 @@ To use this project you must download Docker and docker-compose on your local sy
 
 ### Installing
 
-To get started you must first clone this repository and then make a copy of the `.env.example` file on your local system
+To get started you must first clone this repository to your local system.
 
 ```
-git clone git@github.com:swimlane/dofeedback.git
-cd dofeedback
-cp .env.example .env
+git clone https://github.com/MSAdministrator/docker-flask-template.git
+cd docker-flask-template
 ```
 
-Once you have your repository and the `.env` file then you can run the following to rebuild and setup your containers:
+Once you have your repository on your system then you can run the following to rebuild and setup your containers:
 
 ```
 docker-compose up --build --remove-orphans
 ```
 
-## Running the tests
-
-There are currently `NO TESTS` but we will need to create some overtime.
-
-### Break down into end to end tests
-N/A
-
-### And coding style tests
+### Structure
 
 All sections of the website should be segmented into blueprints. Each `blueprint` should have the following structure:
 
 ```
-📦user
+📦home
  ┣ 📂templates
- ┃ ┗ 📂user
- ┃ ┃ ┣ 📜login.html
- ┃ ┃ ┣ 📜members.html
- ┃ ┃ ┣ 📜register.html
- ┃ ┃ ┗ 📜reset_password.html
+ ┃ ┗ 📂home
+ ┃ ┃ ┣ 📜index.html
+ ┃ ┃ ┗ 📜thanks.html
  ┣ 📜__init__.py
  ┣ 📜forms.py
- ┣ 📜models.py
  ┗ 📜views.py
 ```
 
@@ -58,7 +53,7 @@ Not all modules (single .py files) may be needed. For example not every blueprin
 
 ## Deployment
 
-Currently there is a production deployment docker-compose file [docker-compose.production.yml](docker-compose.production.yml) but there needs some work done to make it fully production ready.
+Currently there is `NO` production deployment docker-compose file.
 
 ## Built With
 

@@ -31,7 +31,7 @@ setup(
     long_description_content_type="text/markdown",
     install_requires=parse_requirements('./requirements.txt'),
     keywords=['carcass'],
-    url='https://github.com/swimlane/docker-flask-template',
+    url='https://github.com/msadministrator/docker-flask-template',
     author='MSAdministrator',
     author_email='rickardja@live.com',
     python_requires='>=3.6, <4'

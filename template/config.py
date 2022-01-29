@@ -7,7 +7,6 @@ class Config:
     # general settings
     WTF_CSRF_ENABLED = False
     SECRET_KEY                 = secrets.token_urlsafe()
-
     SESSION_TYPE               = os.environ.get('SESSION_TYPE', 'null') # redis perferred?
 
 
